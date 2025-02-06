@@ -1,0 +1,15 @@
+div {
+    font: 300;
+}
+/*this is a type or element selector*/
+h1{
+    color: blue;
+}
+/*this is a id Selector*/
+#a{
+    color:green;
+}
+/*this is a universal selector*/
+*{
+    background-color: yellow;
+}
