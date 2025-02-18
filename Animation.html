@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: relative;
+            animation-name: move-box;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-name: move-and-rotate;
+            border:2px solid;
+            display:flexbox;
+
+        }
+        @keyframes move-box{
+            0% {left:0;}
+            50% {left:400px;}
+            100% {left:200px;}
+        }
+        @keyframes move-and-rotate{
+            0% {left:0; transform:rotate(0deg);}
+            25% {left:50px; background-color: chartreuse;transform: rotate(180deg);border:2px solid red ;}
+            50% {left:100px;transform:rotate(180deg);}
+            100% {left:200px;background-color: coral;display: flex; transition-timing-function: ease-out;}
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Karthik</div>
+</body>
+</html>

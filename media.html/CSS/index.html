@@ -8,17 +8,40 @@
         /* this is a class Selector */
         .ab{
             font:bold;
-            color:aqua;
+            color:darkmagenta;
         }
-        
+    /* this is a type/element Selector*/    
     div {
         color: red;
     }</style>
     <link rel="stylesheet" href="Style.css">
 </head>
 <body>
-    <div style="background:blue;">hello</div>
+    <div style="background:palevioletred;">hello</div>
+
+    <!-- This is a id selector -->
     <h1 id="a">THIS IS A HEADER</h1>
-   <marquee behavior="" direction="">hello world</marquee> <p class="ab">this is a class</p>
+    <!-- This is a class Selctor -->
+   <marquee Style="color:darkblue;"behavior="" direction="">hello world</marquee> <p class="ab">this is a class</p>
+
+   <!-- This ia a descendant Selector -->
+    <div>
+        <article>"This is a Article"</article>
+    </div>
+    <!-- This  is a CHild Selector -->
+     <ul>
+        <li>This is a List Element</li>
+    </ul>
+
+    <!-- this is a Grouping Selector -->
+     <blockquote>"The line is Started after space"</blockquote>
+     <section>this is a separate section</section>
+     <h5>Thank you</h5>
+
+     <!-- this is a Attribute Selector -->
+      <form action="">
+        <label for="">userName</label>
+        <input type="text">
+      </form>
 </body>
 </html>

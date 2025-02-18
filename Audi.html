@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIA Passenger Vehicles | India</title>
+    <style>
+        /* Custom Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+        :root {
+            --mb-blue: #e600a9;
+            --mb-black: #1A1A1A;
+            --mb-gray: #666666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Top Navigation Bar */
+        .top-nav {
+            background: var(--mb-black);
+            padding: 8px 40px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 30px;
+        }
+
+        .top-nav a {
+            color: var(--mb-blue);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        /* Main Navigation */
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            position: sticky;
+            top: 0;
+            background: black;
+            z-index: 1000;
+           
+        }
+            
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+        }
+
+        .nav-links a {
+            color: var(--mb-blue);
+            text-decoration: none;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        /* Hero Section */
+/* Hero Container */
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* Fullscreen Video Background */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire background */
+    z-index: -1; /* Moves the video behind the content */
+}
+
+/* Hero Content Styling */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: rgba(255, 255, 255, 0.2);
+    color: tomato;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition:0.3s ease;
+    border: 2px solid lightgreen;
+}
+
+.hero-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: yellow;
+}
+
+
+        /* Model Cards Grid */
+/* Model Grid: Stack models vertically */
+/* Remove grid and stack sections vertically */
+.model-grid {
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column; /* Stack each section */
+    gap: 50px; /* Adds spacing between each car section */
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Each model is now a separate section */
+.model-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Image section on the left */
+.model-image {
+    flex: 0 0 40%;
+    height: 250px;
+    background: #f5f5f5;
+    overflow: hidden;
+}
+
+.model-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Details section on the right */
+.model-details {
+    flex: 0 0 60%;
+    padding: 20px;
+}
+
+.model-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--mb-black);
+    margin-bottom: 10px;
+}
+
+.model-price {
+    color: var(--mb-gray);
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.model-description {
+    font-size: 1rem;
+    color: var(--mb-gray);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Call-to-action button */
+.model-cta {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--mb-blue);
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 30px;
+    transition: background 0.3s ease;
+}
+
+.model-cta:hover {
+    background: rgba(183, 20, 20, 1);
+    color: black;
+    transform: scale(1.1) ;
+}
+
+
+        /* Footer Styles */
+        .main-footer {
+            background: var(--mb-black);
+            color: white;
+            padding: 60px 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 20px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #cccccc;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .search-bar {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 150px;
+}
+
+.menu-button {
+    background: orangered;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    margin-left: 25px;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-nav">
+        <a href="#">Dealer near you</a>
+        <a href="#">Contact Us</a>
+        <a href="#">India</a>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <img src="575723_v1.jpg" alt="KIA CARS" width="50">
+        
+        <div class="nav-links">
+            <a href="">Vehicles</a>
+            <a href="">Design</a>
+            <a href="">Innovation</a>
+            <a href="">Owners</a>
+            <a href="">Offers</a>
+        </div>
+        
+        <div class="nav-actions">
+            <!-- Search Bar -->
+            <input type="text" placeholder="Search..." class="search-bar">
+            
+            <!-- Menu Button -->
+            <button class="menu-button">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-container">
+        <!-- Video Background -->
+        <video autoplay loop muted playsinline class="hero-video">
+            <source src="media.html/19178495-hd_1080_1920_60fps.mp4"width:100px,height:100px type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <h1>Kia is a South Korean car manufacturer that was founded in 1944</h1>
+            <p> well-designed, feature-packed, and affordable cars.</p>
+            <a href="#models" class="hero-btn">Latest Models</a>
+        </div>
+    </div>
+    
+
+    <!-- Model Grid -->
+    <div class="model-grid">
+        <!-- Car 1 -->
+        <section class="model-card">
+            <div class="model-image">
+                <img src="media.html/CSS/pexels-zion-14671201.jpg" alt="Kia-Seltos Model S-Class">
+            </div>
+            <div class="model-details">
+                <h3 class="model-name">KIA SELTOS</h3>
+                <div class="model-price">From 11 LAKHS</div>
+                <p class="model-description">
+                    6 Airbags (Front, Side & Curtain Airbags)
+                    ESC, VSM & HAC
+                    All Wheel Disc Brakes
+                    20.32 cm (8.0”) Touchscreen with Wireless Android Auto & Apple Carplay
+                    Full Digital Cluster with 10.5 cm (4.2") Color TFT MID
+                    Rear Door Sunshade Curtain
+                    Halogen Projector Headlamps
+                    Rear Parking Camera
+                    Star Map LED Connected Tail Lamps
+                </p>
+                <a href="#" class="model-cta">View Details</a>
+            </div>
+        </section>
+    
+        <!-- Car 2 -->
+        <section class="model-card">
+            <div class="model-image">
+                <img src="pexels-zion-14999411.jpg" alt="SONET MODEL">
+            </div>
+            <div class="model-details">
+                <h3 class="model-name">KIA SONET</h3>
+                <div class="model-price">From 9 LAKHS</div>
+                <p class="model-description">
+                    The new Sonet delivers a wild driving experience that’s reborn to transcend your expectations.
+Get ready to immerse yourself in the world of unmatched quality, unbeatable value, and unparalleled premium appeal. With a commitment to excellence, the Sonet offers exceptional value-for-money boasting the Lowest Maintenance Cost, Best Total Cost of Ownership and Highest Residual Value in its segment*.
+                </p>
+                <a href="" class="model-cta">View Details</a>
+            </div>
+        </section>
+    
+        <!-- Car 3 -->
+        <section class="model-card">
+            <div class="model-image">
+                <img src="pexels-hyundaimotorgroup-20540470.jpg" alt="KIA CARNIVAL MODEL">
+            </div>
+            <div class="model-details">
+                <h3 class="model-name">KIA CARNIVAL</h3>
+                <div class="model-price">From 9 LAKHS</div>
+                <p class="model-description">
+                    The Kia Carnival has 1 Diesel Engine on offer. The Diesel engine is 2151 cc . It is available with Automatic transmission.Depending upon the variant and fuel type the Carnival has a mileage of 14.85 kmpl. The Carnival is a 7 seater 4 cylinder car and has length of 5155 mm, width of 1995 mm and a wheelbase of 3090 mm.
+                </p>
+                <a href="" class="model-cta">View Details</a>
+            </div>
+        </section>
+    </div>
+    
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h4>Discover</h4>
+                <ul class="footer-links">
+                    <li><a href="">Electric Vehicles</a></li>
+                    <li><a href="">AMG</a></li>
+                    <li><a href="">Maybach</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Book a Test Drive</a></li>
+                    <li><a href="#">Service Packages</a></li>
+                    <li><a href="#">Roadside Assistance</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

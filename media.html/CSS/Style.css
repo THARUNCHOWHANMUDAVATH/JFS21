@@ -11,5 +11,25 @@ h1{
 }
 /*this is a universal selector*/
 *{
-    background-color: yellow;
+    background-color:cornsilk;
+}
+/* this is for Descendant Selector*/
+div article{
+    font: oblique;
+    color: black;
+}
+/*This is for Child Selector*/
+ul>li{
+    color:chocolate;
+}
+/*This is for Grouping Selectors*/
+blockquote,section,h5{
+    font:bolder;
+    color:red;
+    stroke: bisque;
+}
+/*this is for Attribute input Selector*/
+input[type="text"]{
+    font:message-box;
+    color:chartreuse;
 }
